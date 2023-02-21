@@ -1,13 +1,11 @@
 #include "main.h"
 
 /**
- * main -prints the alphabet, in lowercase, followed by a new line.
- *
- * Return: o
+ * print_alphabet - Entry point
+ * Return:0
  */
 
-void _putchar__alphabet(void)
-
+void print_alphabet(void)
 {
 	char c = 'a';
 
@@ -17,6 +15,6 @@ void _putchar__alphabet(void)
 		c++;
 
 	}
-
 	_putchar('\n');
+
 }
