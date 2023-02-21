@@ -6,7 +6,7 @@
  * Return: o
  */
 
-void print_alphabet(void)
+void _putchar__alphabet(void)
 
 {
 	char c = 'a';
