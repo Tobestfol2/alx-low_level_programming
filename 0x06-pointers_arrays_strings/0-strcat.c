@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _street - concatenates two string
+ * _stcaet - concatenates two string
  * @dest: string to append to
  * @src: string to add
  *
