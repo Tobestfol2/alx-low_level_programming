@@ -9,13 +9,13 @@
  * Return: pointer to the new array
  */
 
-init *array_range(int min, int max)
+int *array_range(int min, int max)
 {
-	init *ptr;
-	init i, size;
+	int *ptr;
+	int i, size;
 
 	if (min > max)
-		return (NULL)
+		return (NULL);
 
 	size = max - min + 1;
 
@@ -26,4 +26,4 @@ init *array_range(int min, int max)
 		ptr[i] = min++;
 
 	return (ptr);
-)
+}
