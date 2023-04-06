@@ -12,17 +12,12 @@
 int sum_listint(listint_t *head)
 {
 	int sum = 0;
-	listint_t *temp = head;
+	listint_t *current = head;
 
-	if (head == NULL)
+	while (current)
 	{
-		return (0);
+		sum = sum + current->n;
+		current = current->next;
 	}
-
-	for (temp = head; temp != NULL; temp->next)
-	{
-		sum += temp->next;
-	}
-
 	return (sum);
 }
