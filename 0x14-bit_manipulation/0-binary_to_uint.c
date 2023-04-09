@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * binary_to_unit - Converts a binary number to unsigned int
+ * binary_to_uint - Converts a binary number to unsigned int
  * @b: String containing the binary number
  *
  * Tobest_codes
  *
  * Return: the converted number
  */
-unsigned int binary_to_unit(const char *b)
+unsigned int binary_to_uint(const char *b)
 {
 	int i;
 	unsigned int binary = 0;
