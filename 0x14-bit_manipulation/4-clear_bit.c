@@ -8,7 +8,7 @@
  *
  * Tobest_codes
  *
- * Return: 1 if successful, -1 oi not successful
+ * Return: 1 if successful, -1 if not successful
  */
 
 int clear_bit(unsigned long int *n, unsigned int index)
