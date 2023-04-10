@@ -13,31 +13,11 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	if (index >= (sizeof(unsigned long int) * 8))
-	{
+	int bit_size;
+
+	if (index > 63)
 		return (-1);
-	}
+	bit_size = (n >> index) & 1;
 
-	return ((n >> index) & 1);
-}
-
-int main(void)
-{
-	unsigned long int n = 64;
-	unsigned int index = 2;
-
-	int binary = set_bit(unsigned int, unsigned long int *n, index);
-
-	if (binary == -1)
-	{
-		printf("Error: Invalid index|n");
-	}
-
-	else
-	{
-		printf("B value at index %d of number %lu", index, n, binary);
-
-	}
-
-	return (0);
+	return (bit_size);
 }
