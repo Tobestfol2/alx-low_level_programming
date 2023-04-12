@@ -1,6 +1,7 @@
 #include "main.h"
-#include <string.h>
+#include <stdlib.h>
 #include <stdio.h>
+
 /**
  * append_text_to_file - Appending text at the end of a file.
  * @filename: Points to the name of the file.
@@ -15,29 +16,22 @@
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	if (filename == NULL)
+	if (!filename)
 	{
 		return (-1);
 	}
 
-	if (text_content == NULL)
-	{
-		return (1);
-	}
-
-	int *o = fopen(filename, "a");
-
-	if (o == NULL)
+	FILE(*file)
 	{
 		return (-1);
 	}
 
-	size_t length = strlen(text_content);
-	size_t written = fwrite(text_content, sizeof(char), length, o);
+	if (text_content != NULL)
+	{
+		fprintf(fileno,% "s", text_content);
+	}
 
-	close(o);
-
-	if (written != length)
+	if (fclose(fileno) == EOF)
 	{
 		return (-1);
 	}
