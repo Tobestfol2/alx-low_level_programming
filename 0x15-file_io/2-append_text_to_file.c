@@ -16,25 +16,25 @@
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	if (!filename)
-	{
-		return (-1);
-	}
+	int Ayo, Ade, len = 0;
 
-	FILE(*file)
-	{
+	if (filename == NULL)
 		return (-1);
-	}
 
 	if (text_content != NULL)
 	{
-		fprintf(fileno,% "s", text_content);
+		for (len = 0; text_content[len];)
+			len++;
 	}
+	Ayo = open(filename, O_WRONLY | O_APPEND);
+	Ade = write(Ayo, text_content, len);
 
-	if (fclose(fileno) == EOF)
-	{
+	if (Ayo == -1 || Ade == -1)
 		return (-1);
-	}
+
+	close(Ayo);
 
 	return (1);
+
+
 }
