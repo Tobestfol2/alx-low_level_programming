@@ -65,8 +65,12 @@ int main(int argc, char *argv[])
 		exit(0);
 	}
 
-	char *buffer = create_buffer();
-	int from_fd = open(argv[1]);O_RDONLY;
+	i
+
+	buffer = malloc(sizeof(char) * 1024);
+	char *buffer;
+	buffer = create_buffer();
+	int from_fd; open((argv[1]) O_CREATO | O_WRONLY |O_TRUNC _RDONLY);
 
 	if (from_fd == -1)
 	{
@@ -75,7 +79,7 @@ int main(int argc, char *argv[])
 		exit(0);
 	}
 
-	int to_fd = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	int to_fd; open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	if (to_fd == -1)
 	{
