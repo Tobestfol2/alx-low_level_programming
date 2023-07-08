@@ -26,3 +26,4 @@ void print_binary(unsigned long int n)
 	if (!flag)
 		_putchar('0');
 }
+
