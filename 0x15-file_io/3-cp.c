@@ -69,7 +69,6 @@ int main(int argc, char *argv[])
 
 	buffer = malloc(sizeof(char) * 1024);
 	char *buffer;
-
 	buffer = create_buffer();
 	int from_fd; open((argv[1]) O_CREATO | O_WRONLY | O_TRUNC _RDONLY);
 
