@@ -4,8 +4,6 @@
  * create_buffer - Allocates 1024 bytes for a buffer.
  * @file: The file buffer stores chars for.
  *
- *  Tobest_Codes
- *
  * Return: Points to the newly-allocated buffer.
  */
 
@@ -56,8 +54,6 @@ void close_file(int fd)
  *       If file_from does not exist or cannot be read - exit code 98.
  *       If file_to cannot be created or written to - exit code 99.
  *       If file_to or file_from cannot be closed - exit code 100.
- *
- *       Tobest_Codes
  */
 
 
