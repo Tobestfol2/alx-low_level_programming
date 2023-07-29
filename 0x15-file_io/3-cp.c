@@ -1,45 +1,42 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-
-char *create_buffer(char *file);
-void close_file(int fd);
 
 /**
  * create_buffer - Allocates 1024 bytes for a buffer.
- * @file: The name of the file buffer is storing chars for.
+ * @file: The file buffer stores chars for.
  *
- * Tobest_Codes
+ *  Tobest_Codes
  *
- * Return: A pointer to the newly-allocated buffer.
+ * Return: Points to the newly-allocated buffer.
  */
+
 char *create_buffer(char *file)
 {
-	char *buffer;
+	char *buff_er;
 
-	buffer = malloc(sizeof(char) * 1024);
+	buff_er = malloc(sizeof(char) * 1024);
 
-	if (buffer == NULL)
+	if (buff_er == NULL)
 	{
 		dprintf(STDERR_FILENO,
 			"Error: Can't write to %s\n", file);
 		exit(99);
 	}
 
-	return (buffer);
+	return (buff_er);
 }
 
 /**
  * close_file - Closes file descriptors.
  * @fd: The file descriptor to be closed.
  */
+
 void close_file(int fd)
 {
-	int c;
+	int klose;
 
-	c = close(fd);
+	klose = close(fd);
 
-	if (c == -1)
+	if (klose == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
@@ -48,22 +45,26 @@ void close_file(int fd)
 
 /**
  * main - Copies the contents of a file to another file.
- * @argc: The number of arguments supplied to the program.
- * @argv: An array of pointers to the arguments.
+ * @argc: No. of arguments given to the program.
+ * @argv: Arrya pointers to the arguments.
  *
  * Tobest_Codes
  *
  * Return: 0 on success.
  *
- * Description: If the argument count is incorrect - exit code 97.
- *              If file_from does not exist or cannot be read - exit code 98.
- *              If file_to cannot be created or written to - exit code 99.
- *              If file_to or file_from cannot be closed - exit code 100.
+ * Note: If the argument count is incorrect - exit code 97.
+ *       If file_from does not exist or cannot be read - exit code 98.
+ *       If file_to cannot be created or written to - exit code 99.
+ *       If file_to or file_from cannot be closed - exit code 100.
+ *
+ *       Tobest_Codes
  */
+
+
 int main(int argc, char *argv[])
 {
-	int from, to, r, w;
-	char *buffer;
+	int from, to, r_ead, rite;
+	char *buff_er;
 
 	if (argc != 3)
 	{
@@ -71,37 +72,35 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
-	buffer = create_buffer(argv[2]);
+	buff_er = create_buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
-	r = read(from, buffer, 1024);
+	r_ead = read(from, buff_er, 1024);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
-		if (from == -1 || r == -1)
+		if (from == -1 || r_ead == -1)
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't read from file %s\n", argv[1]);
-			free(buffer);
+			free(buff_er);
 			exit(98);
 		}
 
-		w = write(to, buffer, r);
-		if (to == -1 || w == -1)
+		rite = write(to, buff_er, r_ead);
+		if (to == -1 || rite == -1)
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't write to %s\n", argv[2]);
-			free(buffer);
+			free(buff_er);
 			exit(99);
 		}
 
-		r = read(from, buffer, 1024);
+		r_ead = read(from, buff_er, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
 
-	} while (r > 0);
-
-	free(buffer);
+	} while (r_ead > 0);
+	free(buff_er);
 	close_file(from);
 	close_file(to);
-
 	return (0);
 }
