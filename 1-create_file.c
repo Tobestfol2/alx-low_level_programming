@@ -1,16 +1,14 @@
 #include "main.h"
-#include <string.h>
 
 /**
- * create_file - Cretes a file Create
- * @filename: Points to the name of the file to create.
- * @text_content: A pointer to a string that writes to the file.
+ * create_file - Creates a file.
+ * @filename: A pointer that points to the name of the file to create.
+ * @text_content: Points to a string to write to the file.
  *
- * Tobest_codes
+ * Tobest_Codes
  *
- * Return: If the function fails - -1 or -1 if otherwise
+ * Return: If the function fails = -1; else = 1
  */
-
 int create_file(const char *filename, char *text_content)
 {
 	int oen, rite, lend = 0;
