@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_endianess - Chesks for endianness
+ * get_endianness - tells whether a machine is a little or big endian
  *
  * Tobest_codes
  *

@@ -3,15 +3,15 @@
 #include <string.h>
 
 /*
- *binary_to_uint - Converts a binary number to unsigned int
- *@b: String containing the binary number
+ * binary_to_uint - Converts a binary string to unsigned integer.
+ * @b: String containing the binary number
  *
- *Tobest_codes
+ * Tobest_codes
  *
- *Return: the converted number
+ * Return: the converted number
  */
 
-unsigned int binary_to_unit(const char *b)
+unsigned int binary_to_uint(const char *b)
 {
 	unsigned int n = 0;
 
