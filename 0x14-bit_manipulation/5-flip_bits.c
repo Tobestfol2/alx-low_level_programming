@@ -4,7 +4,7 @@
 /**
  * flip_bits - Flip bits to convert one number to another
  * @n: First number
- * @n: Second number to convert to
+ * @m: Second number to convert to
  *
  * Tobest_codes
  *
@@ -13,17 +13,16 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int diff;
+	unsigned long int flip;
 	int counter;
 
-	diff = n ^ m;
+	flip = n ^ m;
 	counter = 0;
 
-	while (diff)
+	while (flip)
 	{
 		counter++;
-		diff &= (diff - 1);
+		flip &= (flip - 1);
 	}
-
 	return (counter);
 }
