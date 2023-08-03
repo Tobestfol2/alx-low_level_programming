@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 
-/*
- * binary_to_uint - Converts a binary string to unsigned integer.
+/**
+ * binary_to_uint - Converts a binary number to unsigned unary.
  * @b: String containing the binary number
  *
  * Tobest_codes
